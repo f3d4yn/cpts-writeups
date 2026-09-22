@@ -1,4 +1,4 @@
-![[Pasted image 20260911170043.png|700]]
+![](Pasted image 20260911170043.png|700)
 
 
 # 1- Introduction
@@ -7,7 +7,7 @@
 - **Brute Forcing**: This is a trial-and-error attack method used to crack credentials like passwords by systematically trying every possible combination until the correct one is found. The attack's success is influenced by password complexity, the attacker's computing power, and security measures like account lockouts.
 ## How Brute Forcing Works
 
-![[Pasted image 20260911171345.png|590]]
+![](Pasted image 20260911171345.png|590)
 
 ## Types of Brute Forcing
 
@@ -67,7 +67,7 @@ we only need to modify the ip address and the port .
 ---
 #### After successfully brute-forcing the PIN, what is the full flag the script returns?
 
-![[Pasted image 20260921150925.png]]
+![](Pasted image 20260921150925.png)
 
 Done.
 ## Dictionary Attacks
@@ -122,7 +122,7 @@ The Python script orchestrates the dictionary attack. It performs the following 
 ---
 ### After successfully brute-forcing the target using the script, what is the full flag the script returns?
 
-![[Pasted image 20260921151007.png]]
+![](Pasted image 20260921151007.png)
 Done.
 
 # 3- Hydra
@@ -174,20 +174,20 @@ Web applications often employ authentication mechanisms to protect sensitive dat
 
 Requesting the resource without credentials returns a `401 Unauthorized`, confirming Basic Auth is in place:
 
-![[Pasted image 20260911185857.png]]
+![](Pasted image 20260911185857.png)
 
 **2. Brute-force the password**
 
 Username is already known (`basic-auth-user`), so only the password needs to be brute-forced. Hydra's `http-get` module is used against the custom port:
 
-![[Pasted image 20260921151050.png]]
+![](Pasted image 20260921151050.png)
 
 Hydra returns a valid password from the wordlist.
 
 **3. Authenticate and retrieve the content**
 With valid credentials, `curl -u` can authenticate directly instead of relying on a browser prompt:
 
-![[Pasted image 20260921151123.png]]
+![](Pasted image 20260921151123.png)
  Done.
 
 ##  Login Forms
@@ -220,7 +220,7 @@ username=john&password=secret123
 ```
 
 For this example we have this form that we have to brute force to get the flag.
-![[Pasted image 20260912032131.png|542]]
+![](Pasted image 20260912032131.png|542)
 
 ### Browser Developer Tools
 
@@ -233,11 +233,11 @@ so we just type this command andd we get the valid credentials.
 hydra -L top-usernames-shortlist.txt -P 2023-200_most_used_passwords.txt -f IP-ADDR -s PORT http-post-form "/:username=^USER^&password=^PASS^:F=Invalid credentials"
 ```
 
-![[Pasted image 20260921151158.png]]
+![](Pasted image 20260921151158.png)
 
 Then we can simply access and get the flag.
 
-![[Pasted image 20260921151224.png]]
+![](Pasted image 20260921151224.png)
 
 Done.
 # 4- Medusa
@@ -275,16 +275,16 @@ medusa -h IP-ADDR -n PORT -u sshuser -P 2023-200_most_used_passwords.txt -M ssh
 ```
 
 
-![[Pasted image 20260921151334.png]]
+![](Pasted image 20260921151334.png)
 
 so we log into the ssh and we have to run this command to brute-force the ftp service.
 
-![[Pasted image 20260912165118.png]]
+![](Pasted image 20260912165118.png)
 
-![[Pasted image 20260921151424.png]]
+![](Pasted image 20260921151424.png)
  and its done we get the password for the ftp.
  Then we use this command to login `ftp ftp://ftpuser:<FTPUSER_PASSWORD>@localhost`
- ![[Pasted image 20260921151457.png]]
+ ![](Pasted image 20260921151457.png)
  Done.
 
 
@@ -349,9 +349,9 @@ cupp -i
 ### After successfully brute-forcing, and then logging into the target, what is the full flag you find?
 
 The first thing to do is to generate the wordlist.
-![[Pasted image 20260912192659.png]]
+![](Pasted image 20260912192659.png)
 Then we have to create the passwords list.
-![[Pasted image 20260912192802.png]]
+![](Pasted image 20260912192802.png)
 
 As we did earlier, we can use grep to filter that password list to match that policy:
 
@@ -360,35 +360,35 @@ grep -E '^.{6,}$' jane.txt | grep -E '[A-Z]' | grep -E '[a-z]' | grep -E '[0-9]'
 ```
 
 Last thing to do is to execute the hydra command.
-![[Pasted image 20260921151559.png]]
+![](Pasted image 20260921151559.png)
 
 we have the credentials so we go to the form and we get the flag
-![[Pasted image 20260921151621.png]]
+![](Pasted image 20260921151621.png)
 Done.
 
 # 6- Skills Assessment
 
-![[Pasted image 20260913014341.png]]
-![[Screenshot From 2026-09-13 01-28-58.png]]
+![](Pasted image 20260913014341.png)
+![](Screenshot From 2026-09-13 01-28-58.png)
 We have to brute force this to get the first question.
 
 We simply use this commande :
 
 `hydra -L top-usernames-shortlist.txt  -P 2023-200_most_used_passwords.txt IP-ADDR http-get / -s PORT `
-![[Pasted image 20260921151705.png]]
+![](Pasted image 20260921151705.png)
 
 So we have the valid credentials we can login and get the answer of the seconde question.
-![[Pasted image 20260921151732.png]]
+![](Pasted image 20260921151732.png)
 
 
-![[Pasted image 20260913020524.png]]
+![](Pasted image 20260913020524.png)
 
 The first thing to do is to scan the target.
-![[Pasted image 20260921152034.png]]
+![](Pasted image 20260921152034.png)
 We see that its a SSH service.
 So we have to use hydre with the username discovred in the privious section with the password list we downloaded earlier.
 
-![[Pasted image 20260921152305.png]]
+![](Pasted image 20260921152305.png)
 
 After successfully obtaining the credentials. we login into SSH to the target .
 we list the contents of the current working directory and open the file IncidentReport.txt, which contains the following message:
@@ -396,12 +396,12 @@ we list the contents of the current working directory and open the file Incident
 > Upon reviewing recent FTP activity, we have identified suspicious behavior linked to a specific user. The user **Thomas Smith** has been regularly uploading files to the server during unusual hours and has bypassed multiple security protocols. This activity requires immediate investigation.
 
 So we perform an nmap on the local host.
-![[Pasted image 20260921152516.png]]
+![](Pasted image 20260921152516.png)
 
 The next step is to use the username-anarchy script to generate possible usernames that will be used in our FTP brute-force attack.
 `./username-anarchy/username-anarchy Thomas Smith > thomas.txt`
 We use the generated usenames-list to perform the attack with medusa
-![[Pasted image 20260921152916.png]]
+![](Pasted image 20260921152916.png)
 ## Question 1
 ---
 ### What is the username of the ftp user you find via brute-forcing?
@@ -414,5 +414,5 @@ Done.
 ### What is the flag contained within flag.txt
 
 Once we get the credentials, we connect to the FTP service .
-![[Pasted image 20260921153258.png]]
+![](Pasted image 20260921153258.png)
 Done.
