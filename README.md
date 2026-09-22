@@ -59,5 +59,5 @@ per-section methodology walkthrough.
 
 ## Tooling
 
-Notes are drafted in [Obsidian](https://obsidian.md/) and synced to this
-repo via the Obsidian Git plugin.
+Notes are drafted in [Obsidian](https://obsidian.md/), then manually copied and pushed to this
+repo via git.
