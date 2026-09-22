@@ -43,7 +43,7 @@ per-section methodology walkthrough.
 | 13 | [Active Directory Enumeration & Attacks](./13-active-directory-enumeration-and-attacks/) | Tier II | ⬜ Not Started |
 | 14 | [Using Web Proxies](./14-using-web-proxies/) | Tier II | ⬜ Not Started |
 | 15 | [Attacking Web Applications With Ffuf](./15-attacking-web-applications-with-ffuf/) | Tier 0 | ✅ Completed |
-| 16 | [Login Brute Forcing](./16-login-brute-forcing/) | Tier II | 🟡 In Progress |
+| 16 | [Login Brute Forcing](./16-login-brute-forcing/) | Tier II | ✅ Completed |
 | 17 | [SQL Injection Fundamentals](./17-sql-injection-fundamentals/) | Tier 0 | ⬜ Not Started |
 | 18 | [SQLMap Essentials](./18-sqlmap-essentials/) | Tier II | ⬜ Not Started |
 | 19 | [Cross-Site Scripting (XSS)](./19-cross-site-scripting-xss/) | Tier II | ⬜ Not Started |
