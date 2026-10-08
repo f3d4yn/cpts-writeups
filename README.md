@@ -1,3 +1,4 @@
+![Banner](assets/Penetration\ Tester\ Notes\ \&\ Writeups.png)
 # CPTS Writeups
 
 Personal study notes and methodology writeups for the Hack The Box Academy
