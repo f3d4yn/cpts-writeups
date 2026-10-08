@@ -1,6 +1,5 @@
-![Banner](assets/Penetration\ Tester\ Notes\ \&\ Writeups.png)
 # CPTS Writeups
-
+![Banner](assets/banner.png)
 Personal study notes and methodology writeups for the Hack The Box Academy
 **CPTS (Certified Penetration Testing Specialist)** path.
 
