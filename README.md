@@ -38,7 +38,7 @@ per-section methodology walkthrough.
 | 08 | [Shells & Payloads](./08-shells-and-payloads/) | Tier I | 🟡 In Progress |
 | 09 | [Using The Metasploit Framework](./09-using-the-metasploit-framework/) | Tier 0 | ✅ Completed |
 | 10 | [Password Attacks](./10-password-attacks/) | Tier I | 🟡 In Progress |
-| 11 | [Attacking Common Services](./11-attacking-common-services/) | Tier II | ⬜ Not Started |
+| 11 | [Attacking Common Services](./11-attacking-common-services/) | Tier II | ✅ Completed |
 | 12 | [Pivoting, Tunneling, And Port Forwarding](./12-pivoting-tunneling-and-port-forwarding/) | Tier II | ⬜ Not Started |
 | 13 | [Active Directory Enumeration & Attacks](./13-active-directory-enumeration-and-attacks/) | Tier II | ⬜ Not Started |
 | 14 | [Using Web Proxies](./14-using-web-proxies/) | Tier II | ⬜ Not Started |
